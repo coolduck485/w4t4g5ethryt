@@ -7,7 +7,7 @@ import { ParticleBackground } from "./ParticleBackground"
 import { useTypingEffect } from "@/hooks/useTypingEffect"
 
 export function Hero() {
-  const name = "dri"
+  const name = "binary"
   const jobTitles = [
     "Freelancer",
     "Developer",

@@ -1,38 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 import { MailIcon, SendIcon } from "lucide-react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { ParticleBackground } from "./ParticleBackground";
 
 const contactMethods = [
   {
-    name: "Discord",
-    value: "_dri",
-    icon: <FontAwesomeIcon
-            icon={faDiscord}
-            className="w-12 h-12 text-white transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
-          />,
-    link: "https://discord.com/users/339632248636571649",
+    name: "Discord:",
+    value: "biinary",
+    icon: (
+      <FontAwesomeIcon
+        icon={faDiscord}
+        className="w-12 h-12 text-white transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
+      />
+    ),
+    link: "https://discord.com/users/1365122799659646976",
   },
   {
     name: "Email",
     value: "imakethingsandstuff@proton.me",
-    icon: <MailIcon className="w-12 h-12 text-white transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" />,
+    icon: (
+      <MailIcon className="w-12 h-12 text-white transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
+    ),
     link: "mailto:imakethingsandstuff@proton.me",
   },
   {
-    name: "Telegram",
-    value: "https://t.me/idkdri",
-    icon: <SendIcon className="w-12 h-12 text-white transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" />,
-    link: "https://t.me/idkdri",
+    name: "Telegram:",
+    value: "https://t.me/biiinary",
+    icon: (
+      <SendIcon className="w-12 h-12 text-white transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
+    ),
+    link: "https://t.me/biiinary",
   },
 ];
 
 export function Contact() {
   return (
     <section id="contact" className="min-h-screen py-20 px-4 bg-black">
+      <ParticleBackground />
+
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -54,17 +62,15 @@ export function Contact() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <a href={method.link} target="_blank" rel="noopener noreferrer">
-                <Card className="cursor-pointer group">
-                  <CardContent className="p-6">
-                    <div className="mb-4 p-3 inline-block rounded-full">
-                      {method.icon}
-                    </div>
-                    <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">
-                      {method.name}
-                    </h3>
-                    <p className="text-muted-foreground">{method.value}</p>
-                  </CardContent>
-                </Card>
+                <div className="bg-black border border-zinc-800 rounded-lg p-8 flex flex-col items-center cursor-pointer group">
+                  <div className="mb-4 p-3 inline-block rounded-full">
+                    {method.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">
+                    {method.name}
+                  </h3>
+                  <p className="text-muted-foreground text-center">{method.value}</p>
+                </div>
               </a>
             </motion.div>
           ))}

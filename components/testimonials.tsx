@@ -2,6 +2,7 @@ import { Marquee } from "@/components/marquee";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
+import { ParticleBackground } from "./ParticleBackground";
 
 const testimonials = [
   {
@@ -30,6 +31,7 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section id="testimonials" className="min-h-screen py-20 px-4 bg-black">
+      <ParticleBackground />
       <div className="relative max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center font-heading text-foreground">
           Testimonials

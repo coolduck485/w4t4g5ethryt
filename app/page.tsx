@@ -4,6 +4,8 @@ import { Projects } from "@/components/projects"
 import { Skills } from "@/components/skills"
 import { Testimonials } from "@/components/testimonials"
 import { Contact } from "@/components/contact"
+import { PaymentMethods } from "@/components/payment"
+import { NotificationBox } from "@/components/noti"
 
 export default function Home() {
   return (
@@ -12,8 +14,13 @@ export default function Home() {
       <Hero />
       <Projects />
       <Skills />
-      <Testimonials />
+      <PaymentMethods />
       <Contact />
+      <NotificationBox
+        id="bookings"
+        title="🎉 Available for work 🎉"
+        description="I'm currently available for freelance work. If you're interested, please reach out to me via the contact methods."
+        />
     </main>
   )
 }

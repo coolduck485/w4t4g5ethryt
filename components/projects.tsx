@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { ParticleBackground } from "./ParticleBackground"
 
 const projects = [
   {
@@ -11,12 +12,31 @@ const projects = [
     tags: ["C#", "Python", "Lua"],
     image: "/robloxbot.png?height=400&width=600",
   },
-  // Add more projects here
+  {
+    title: "Discord Bot",
+    description: "A Discord bot that provides various utilities and commands.",
+    tags: ["JavaScript", "Node.js", "Python"],
+    image: "/discord.png?height=400&width=600",
+  },
+
+  {
+    title: "E-commerce Platform",
+    description: "A full-stack e-commerce platform with user authentication and payment processing.",
+    tags: ["MERN Stack", "Node.js"],
+    image: "/tags.png?height=400&width=600",
+  },
+  {title: "Old Freelance Website",
+    description: "An old freelance website that I built for myself to showcase my work and attract clients.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    image: "/infernus.png?height=400&width=600",
+  },
 ]
 
 export function Projects() {
   return (
     <section id="projects" className="min-h-screen py-20 px-4">
+      <ParticleBackground />
+
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +44,7 @@ export function Projects() {
           viewport={{ once: true }}
           className="text-3xl font-bold mb-12 text-center"
         >
-          Featured Projects
+          Some Featured Projects
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-6">
