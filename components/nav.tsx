@@ -24,7 +24,7 @@ export function Nav() {
       animate={{ y: 0, opacity: 1 }}
       className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50"
     >
-      <TooltipProvider>
+      <TooltipProvider delayDuration={100}>
       <div className="flex items-center gap-4 px-6 py-3 bg-zinc-900/90 backdrop-blur-sm rounded-full border border-zinc-800 top-4 left-1/2 transform -translate-x-1/2 z-50">
       {navItems.map((item) => {
             const Icon = item.icon;

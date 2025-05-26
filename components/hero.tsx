@@ -58,7 +58,7 @@ export function Hero() {
               className="inline-block bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent"
               whileHover={{ scale: 1.2, rotate: 10 }}
               transition={{ type: "spring", stiffness: 500, damping: 10 }}
-              animate={controls}
+               // animate={controls}
             >
               {letter}
             </motion.span>
