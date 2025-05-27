@@ -22,7 +22,7 @@ export default function Home() {
         // title="🎉 Available for work 🎉"
         // description="I'm currently available for freelance work. If you're interested, please reach out to me via the contact methods."
         title="New Discord Server"
-        description="Server link: https://discord.gg/TMq46sn8"
+        description="Server link: https://discord.gg/xGddZfzd"
         />
     </main>
   )
